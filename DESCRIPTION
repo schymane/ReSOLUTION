@@ -1,0 +1,47 @@
+Package: ReSOLUTION
+Type: Package
+Title: SOLUTIONS for High ReSOLUTION Mass Spectrometry
+Version: 0.1.5
+Date: 2018-04-26
+Authors@R: c(
+	person(given="Emma L.", family="Schymanski", email="emma.schymanski@uni.lu", role=c("aut","cre")),
+	person(given="Michael A.", family="Stravs", email="michael.stravs@eawag.ch",role=c("ctb")),
+	person(given="Christoph", family="Ruttkies", role=c("ctb")),
+	person(given="Erik", family="Mueller", role=c("ctb")),
+	person(given="Steffen", family="Neumann", role=c("ctb")),
+	person(given="Tobias", family="Schulze", role=c("ctb")),
+	person(given="Martin", family="Loos", role=c("ctb")),
+	person(given="Jennifer E.", family="Schollee", role=c("ctb")),
+	person(given="Benedikt", family="Lauper", role=c("ctb")),
+	person(given="Antony J.", family="Williams", role=c("ctb")) )
+Author: Emma Schymanski with code/thought contributions from Michael Stravs, 
+	Christoph Ruttkies, Erik Mueller, Steffen Neumann, Tobias Schulze, Martin Loos,
+	Jennifer Schollee, Benedikt Lauper and Antony J. Williams
+Maintainer: Emma Schymanski <emma.schymanski@uni.lu>
+Description: The name ReSOLUTION comes from both high resolution
+    mass spectrometry data (the basis of the package) and the
+    SOLUTIONS project under which it was developed. This package
+    provides workflow functionality for non-target screening with
+    high resolution mass spectrometry and many functions for 
+	interacting with MetFrag.
+	Many colleagues contributed snippets, thoughts and ideas; 
+	including those acknowledged as contributors, in individual 
+	functions and beyond. Thank you to all of you. 
+License: Artistic-2.0
+LazyData: TRUE
+SystemRequirements: MetFragCL
+Depends: 
+    RMassBank,rcdk,rcdklibs,RChemMass,enviPat,OrgMassSpecR,readxl,mzR,nontarget
+Suggests: 
+    RMassBankData
+Collate:
+    'EICandMSMS.R'
+	'MassBankRecordeR.R'
+	'MS1_functions.R'
+	'plotMSMS.R'
+	'nontargetWrap.R'
+	'SuspectScreening.R'
+	'MetFragInterpreteR.R'
+	'MetFragConfigR.R'
+	'processSDF.R'
+RoxygenNote: 5.0.1

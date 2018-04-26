@@ -1,0 +1,20 @@
+PrecursorIonType,PrecursorIonMode,IsPositiveIonMode
+[M]+,0,TRUE
+[M-H]-,-1,FALSE
+[M+H]+,1,TRUE
+[M-D]-,-2,FALSE
+[M+D]+,2,TRUE
+[M+NH4]+,18,TRUE
+[M+Na]+,23,TRUE
+[M+K]+  ,39,TRUE
+[M+CH3OH+H]+,33,TRUE
+[M+Cl]-,35,FALSE
+[M+HCOO]-,45,FALSE
+[M+CH3COO]-,59,FALSE
+[M-2H]-,-3,FALSE
+[M-2H+Na]-,21,FALSE
+[M-2H+K]-,37,FALSE
+[M+ACN+H]+,42,TRUE
+[M+ACN+Na]+,64,TRUE
+[M+2ACN+H]+,83,TRUE
+[M]-,0,FALSE

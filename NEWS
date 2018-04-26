@@ -1,0 +1,9 @@
+26.04.18 added addMissingInChIKeys.CSV, adding to git, v0.1.5
+23.04.18 fixes to adduct settings in MetFragConfig and related functions, no version bump.
+19.04.18 added MetFragConfigR, processSDF, fixed documentation & description. v0.1.4
+16.06.17 documentation fixes (added RmbDefaultSettings()), no version bump.
+08.05.17 added b and t to SpecComp.OrgMassSpecR, v 0.1.3
+04.05.17 added Artistic-2.0 license, extractMS1and2.RMBarchive, SpecComp.OrgMassSpecR, v 0.1.2
+11.04.17 fixed minor error in getMBRecordInfo
+07.04.17 added MetFragInterpreteR.R and functions ExplPeaks2MSMS, ExplFormulas2AnnoMZ, v 0.1.1
+03.04.17 first serious package build, version 0.1.0
