@@ -635,7 +635,7 @@ CompToxXLStoLocalCSVterms <- function(xls_file, start_index=15, csv_file= "") {
 #' @export
 #'
 #' @examples
-#' CompToxCSV <- system.file("extdata","CompToxBatchSearch_MetFrag_MSready_C10H14N2.csv",package="ReSOLUTION")
+#' CompToxCSV <- system.file("extdata","CompToxBatchSearch_MetFrag_MSready_C10H14N2_wSelectMetaData.csv",package="ReSOLUTION")
 #' LocalCSVterms <- CompToxCSVtoLocalCSVterms(CompToxCSV)
 #'
 CompToxCSVtoLocalCSVterms <- function(csv_file, start_index=15) {

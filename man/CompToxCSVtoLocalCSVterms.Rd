@@ -21,7 +21,7 @@ This function prepares CompTox CSV Export files for use in MetFragCL. It
 extracts numeric metadata field names for inclusion as scoring terms.
 }
 \examples{
-CompToxCSV <- system.file("extdata","CompToxBatchSearch_MetFrag_MSready_C10H14N2.csv",package="ReSOLUTION")
+CompToxCSV <- system.file("extdata","CompToxBatchSearch_MetFrag_MSready_C10H14N2_wSelectMetaData.csv",package="ReSOLUTION")
 LocalCSVterms <- CompToxCSVtoLocalCSVterms(CompToxCSV)
 
 }
