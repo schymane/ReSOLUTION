@@ -5,8 +5,9 @@
 \title{Create MetFrag Configuration Files}
 \usage{
 MetFragConfig(mass, adduct_type, results_filename, peaklist_path, base_dir,
-DB=c("KEGG","PubChem","ExtendedPubChem","ChemSpider", "LocalCSV","LocalSDF"),
-localDB_path="", output="XLS", token="", ppm=5, mzabs=0.001, frag_ppm=5, IsPosMode=TRUE,
+DB=c("PubChem"),
+localDB_path="", output="XLS", token="", neutralPrecursorMass=FALSE, 
+ppm=5, mzabs=0.001, frag_ppm=5, IsPosMode=TRUE,
 tree_depth=2, num_threads=1, add_refs=TRUE, minInt=0, rt_file_path="", rt_exp=0,suspect_path="",
 suspect_filter=FALSE, UDS_Category="", UDS_Weights="", DB_IDs="", mol_form="", useFormula=FALSE,
 useMoNAMetFusion=TRUE, useMonaIndiv=TRUE, MoNAoffline=TRUE, incl_el="",excl_el="", incl_exclusive=FALSE,

@@ -18,8 +18,9 @@
 #' is available from \url{http://c-ruttkies.github.io/MetFrag/projects/metfragcl/}
 #'
 #' @usage MetFragConfig(mass, adduct_type, results_filename, peaklist_path, base_dir,
-#' DB=c("KEGG","PubChem","ExtendedPubChem","ChemSpider", "LocalCSV","LocalSDF"),
-#' localDB_path="", output="XLS", token="", ppm=5, mzabs=0.001, frag_ppm=5, IsPosMode=TRUE,
+#' DB=c("PubChem"),
+#' localDB_path="", output="XLS", token="", neutralPrecursorMass=FALSE, 
+#' ppm=5, mzabs=0.001, frag_ppm=5, IsPosMode=TRUE,
 #' tree_depth=2, num_threads=1, add_refs=TRUE, minInt=0, rt_file_path="", rt_exp=0,suspect_path="",
 #' suspect_filter=FALSE, UDS_Category="", UDS_Weights="", DB_IDs="", mol_form="", useFormula=FALSE,
 #' useMoNAMetFusion=TRUE, useMonaIndiv=TRUE, MoNAoffline=TRUE, incl_el="",excl_el="", incl_exclusive=FALSE,
@@ -138,8 +139,7 @@
 #' runMetFrag(config_file2, metfrag_dir, MetFragCL_name)
 #'
 MetFragConfig <- function(mass, adduct_type, results_filename, peaklist_path, base_dir,
-                          DB=c("KEGG","PubChem","ExtendedPubChem","ChemSpider","FOR-IDENT","MetaCyc",
-                               "LocalCSV","LocalPSV","LocalSDF"),
+                          DB=c("PubChem"),
                           localDB_path="",output="XLS", token="",
                           neutralPrecursorMass=FALSE, mol_form="",useFormula=FALSE,DB_IDs="",
                           ppm=5, mzabs=0.001, frag_ppm=5, IsPosMode=TRUE,
@@ -719,17 +719,25 @@ CompToxSDFtoLocalSDFterms <- function(SDF_file) {
 #' @description This function extracts metadata headers from the CompTox CSV download file
 #' for use in MetFragCL. It reads metadata field names for inclusion as scoring terms.
 #'
-#' @usage CompToxFullCSVtoLocalCSVterms(csv_file, start_index=13)
+#' @usage CompToxFullCSVtoLocalCSVterms(csv_file, start_index=13, TermsToRemove="default")
 #'
 #' @param csv_file Full path and file name to the Dashboard CSV Download file to process
 #' @param start_index The column number where the metadata columns start (default \code{13} is appropriate
 #' for CompTox Dashboard Download file designed specifically for MetFrag)
+#' @param TermsToRemove Define column headers to remove from scoring terms. Select default values 
+#' using \code{"default"} (see details) or add a vector of strings. \code{c()}
 #'
 #' @return Returns a list containing the CSV file name, a list of scoring terms to add to
 #' the MetFrag config file and a corresponding score weights entry.
 #'
 #' @author Emma Schymanski <emma.schymanski@@uni.lu> in partnership with Christoph Ruttkies (MetFragCL),
 #' Antony J. Williams and team (CompTox Dashboard)
+#' 
+#' @details The current default \code{TermsToRemove} are 
+#' \code{c("TOXCAST_NUMBER_OF_ASSAYS/TOTAL","TOXVAL_Link", "PPRTV_Link", "IRIS_Link")}.
+#' This option removes the terms from MetFrag scoring to avoid processing errors, 
+#' but these columns are retained in the results file, for downstream use if desired.
+#' If MetFrag exits with a status=5, check the log file for terms to add to this list. 
 #'
 #' @seealso \code{\link{MetFragConfig}}, \code{\link{runMetFrag}}
 #'
@@ -740,31 +748,35 @@ CompToxSDFtoLocalSDFterms <- function(SDF_file) {
 #' CompToxFullCSVFile <- system.file("extdata","dsstox_MS_Ready_MetFragTestCSV5.csv",package="ReSOLUTION")
 #' LocalCSVterms <- CompToxCSVtoLocalCSVterms(CompToxFullCSVFile)
 #'
-CompToxFullCSVtoLocalCSVterms <- function(csv_file, start_index=13) {
+CompToxFullCSVtoLocalCSVterms <- function(csv_file, start_index=13, TermsToRemove="default") {
   # extract column names
   cols <- colnames(read.csv(csv_file,nrows=1,check.names = FALSE))
   # this ensures that only the first row is read and not the entire file, as this is huge
   # as this is designed to work on a specific download file, no numeric test is performed.
-
-  ## read in the content, get colnames and test content
-  ## csv_content <- read.csv(csv_file)
-  ## #cols <- colnames(csv_content)
-  ## # now take a look at the content and run tests
-  ## include_col_i <- vector(mode="numeric",length=0)
-  ## include_col_n <- 1
-  ## # take start_index as the start ... for MS-ready this is 15 (current default)
-  ## for (i in start_index:length(cols)) {
-  ##   # this tests if there are ANY numeric values in the column, to avoid errors when running MetFragCL jar
-  ##   num_test <- suppressWarnings(length(grep("FALSE",is.na(as.numeric(as.character(csv_content[,i])))))>0)
-  ##   if (num_test) {
-  ##     include_col_i[include_col_n] <- i
-  ##     include_col_n <- include_col_n + 1
-  ##  }
-  ## }
+  # instead, terms to remove are defined or can be overwritten by the user
 
   # calculate the score terms and weights
   ScoreTerms <- paste(cols[start_index:length(cols)],collapse=",")
   ScoreWeights <- paste0(",", paste(rep(1,(length(cols)-start_index+1)),collapse=","))
+  
+  # have to remove columns that do not contain numeric values.
+  # use default definition, OR input.
+  DefaultTermsTest <- grepl("default",TermsToRemove,fixed=T) 
+  DefaultTerms <- DefaultTermsTest[1] && (length(DefaultTermsTest)==1)
+  if (DefaultTerms) {
+    TermsToRemove <- c("TOXCAST_NUMBER_OF_ASSAYS/TOTAL","TOXVAL_Link", "PPRTV_Link", "IRIS_Link")
+  }
+  # split out the score terms again
+  ScoreTermsSplit <- strsplit(ScoreTerms,",")[[1]]
+  ScoreWeightsSplit <- strsplit(ScoreWeights,",")[[1]]
+  # calculate indices
+  IndicesToRemove <- as.vector(sapply(TermsToRemove,function(string) {grep(string,ScoreTermsSplit,value=F, fixed=T)})) 
+  #grep(TermsToRemove,ScoreTerms,value=F,fixed=T)
+  ScoreTermsSplit <- ScoreTermsSplit[-(IndicesToRemove)]
+  ScoreWeightsSplit <- ScoreWeightsSplit[-(IndicesToRemove)]
+  ScoreTerms <- paste(ScoreTermsSplit,collapse=",")
+  ScoreWeights <- paste(ScoreWeightsSplit,collapse=",")
+  
   # generate the output
   LocalCSVterms <- list()
   LocalCSVterms[['CSV']] <- csv_file

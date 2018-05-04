@@ -30,7 +30,7 @@ matching the given limits (the warnings should indicate if this is the case).
 }
 \description{
 This adds MS/MS Scans to EIC plots (or others) using \code{findMsMsHR.mass} from
-\code{\link{RMassBank}}.
+\code{RMassBank}.
 }
 \examples{
 RmbDefaultSettings()

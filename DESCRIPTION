@@ -1,8 +1,8 @@
 Package: ReSOLUTION
 Type: Package
 Title: SOLUTIONS for High ReSOLUTION Mass Spectrometry
-Version: 0.1.5
-Date: 2018-04-26
+Version: 0.1.6
+Date: 2018-05-04
 Authors@R: c(
 	person(given="Emma L.", family="Schymanski", email="emma.schymanski@uni.lu", role=c("aut","cre")),
 	person(given="Michael A.", family="Stravs", email="michael.stravs@eawag.ch",role=c("ctb")),

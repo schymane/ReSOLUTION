@@ -68,7 +68,7 @@ plotSpectrum <- function(mz, int, main, smiles="", labels=NULL, formatFormula=TR
 #' much more functionality.
 #'
 #' @usage plotAnnoSpectrum(mz, int, main, smiles="", labels=NULL,mz_a=NA,int_a=NA, formatFormula=TRUE,
-#' absInt=FALSE,ylim_factor=2.5,max_xlim=0,kekulise=TRUE)
+#' absInt=FALSE,ylim_factor=2.5,max_xlim=0,kekulise=TRUE,legend=c("spec1","spec2"))
 #'
 #' @param mz Vector containing mz values (x) to plot.
 #' @param int Vector containing intensity values (y) to plot.
@@ -328,7 +328,8 @@ chemistry2expression <- function(formulas) {
 #' compatability with previous workflows/scripts. \code{\link{plotSpectra}} offers
 #' much more functionality. \code{xlim} and \code{ylim} are fixed suited to MS1 spectra.
 #'
-#' @usage plotMS(mz, int, main, labels=NULL, formatFormula=TRUE, absInt=FALSE,ylim_factor=2)
+#' @usage plotMS(mz, int, main, labels=NULL, formatFormula=TRUE, absInt=FALSE,ylim_factor=2,
+#' smiles="")
 #'
 #' @param mz Vector containing mz values (x) to plot.
 #' @param int Vector containing intensity values (y) to plot.
@@ -383,7 +384,7 @@ plotMS <- function(mz, int, main, labels=NULL, formatFormula=TRUE,
 #'
 #' @param smiles SMILES of structure to add to plot
 #' @param kekulise Control aromaticity detection. Default \code{TRUE} is best with
-#' recent \code{\link{rcdk}} versions.
+#' recent \code{rcdk} versions.
 #' @param coords The coordinates (xmin, ymin, xmax, ymax) for the structure.
 #'
 #' @return Adds the structure to the plot in the active device
@@ -415,7 +416,7 @@ addStructToPlot <- function(smiles,kekulise=TRUE,coords=c(0,1000,100,2500)) {
     if (length(img)<=2 && kekulise) {
       mol <- parse.smiles(smiles,kekulise=FALSE)[[1]]
       img <- tryCatch({
-        (view.image.2d(mol, width = 150, height = 150))
+        (view.image.2d(mol))
       }, error = function(e) {
         img <- ""
         print(paste("Invalid SMILES not plotted without kekulise either: ", smiles, sep=""))

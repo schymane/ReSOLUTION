@@ -24,7 +24,7 @@ returning a merged data frame containing the corresponding entries. This uses th
 }
 \details{
 NOTE: for this to work properly, the m/z column names must match exactly.
-This has only been verified so far on records generated with \code{\link{RMassBank}}.
+This has only been verified so far on records generated with \code{RMassBank}.
 }
 \examples{
 MBrecord <- system.file("extdata","EA020161_Diclofenac.txt",package="ReSOLUTION")

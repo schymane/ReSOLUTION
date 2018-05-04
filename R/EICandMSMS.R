@@ -78,7 +78,7 @@
 plotEICs <- function(mzML_filePath, mz, rt, rt_in_sec=TRUE, names=NULL, smiles="", plot_title=NULL,
                      rt_window=NULL, mz_limit=0.001, ppm=10, isPos=TRUE, isLog=FALSE, isSwitching=FALSE,
                      greyscale=FALSE, colours = NULL, cpdID=NULL, ymin_log=3, switchShift=0,
-                     kekulise=TRUE, addMSMS=FALSE, newRMB=TRUE, takePPM=TRUE) {
+                     kekulise=TRUE, addMSMS=TRUE, newRMB=TRUE, takePPM=TRUE) {
   # contributions from Emma, Benedikt & Michele
   # open mzML
   f <- openMSfile(mzML_filePath)
@@ -236,13 +236,13 @@ plotEICs <- function(mzML_filePath, mz, rt, rt_in_sec=TRUE, names=NULL, smiles="
 #'
 #' @description This plots EICs of adducts in \code{adduct_list} from the mzML (or mzXML)
 #' and \code{smiles} given, with various options. Adduct masses are calculated from the
-#' \code{smiles} using \code{\link{getSuspectMasses}} via \code{\link{rcdk}}. Labelling
+#' \code{smiles} using \code{\link{getSuspectMasses}} via \code{rcdk}. Labelling
 #' will not be processed correctly. Adducts that cannot be calculated (especially in negative mode)
 #' are automatically skipped. Uses \code{\link{plotEICs}} behind the scenes.
 #'
 #' @usage plotAdductEICs(mzML_filePath, smiles, adduct_list, rt=0, rt_in_sec=TRUE, plot_title=NULL,
 #' rt_window=NULL, mz_limit=0.001, isPos=TRUE, isLog=FALSE, isSwitching=FALSE, greyscale=FALSE,
-#' colours=NULL, cpdID=NULL, ymin_log=3, switchShift=0, kekulise=TRUE)
+#' colours=NULL, cpdID=NULL, ymin_log=3, switchShift=0, kekulise=TRUE,addMSMS=FALSE,newRMB=TRUE)
 #'
 #' @param mzML_filePath Path to the mzML (or mzXML) file to extract the EICs.
 #' @param smiles SMILES code of the compound of interest.
@@ -336,7 +336,7 @@ plotAdductEICs <- function(mzML_filePath, smiles, adduct_list, rt=60, rt_in_sec=
 #' Add MS/MS Scans to Plot
 #'
 #' @description This adds MS/MS Scans to EIC plots (or others) using \code{findMsMsHR.mass} from
-#' \code{\link{RMassBank}}.
+#' \code{RMassBank}.
 #'
 #' @usage addMsMs(mzML_filePath, mz, rt, rt_window=NULL, maxCount=10, colour="black", isLog = FALSE)
 #'
@@ -409,7 +409,7 @@ addMsMs <- function(mzML_filePath, mz, rt, rt_window=NULL, maxCount=10, colour="
 #' Add MS/MS Scans to Plot - Backwards Compatible to Older RMassBank versions.
 #'
 #' @description This adds MS/MS Scans to EIC plots (or others) using \code{findMsMsHR.mass} from
-#' \code{\link{RMassBank}}, compatible with pre 2.0.0 versions.
+#' \code{RMassBank}, compatible with pre 2.0.0 versions.
 #'
 #' @usage addMsMs.oldRMB(mzML_filePath, mz, rt, rt_window=NULL, maxCount=10, colour="black", isLog = FALSE)
 #'

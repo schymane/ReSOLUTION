@@ -10,7 +10,7 @@ addStructToPlot(smiles, kekulise = TRUE, coords = c(0, 1000, 100, 2500))
 \item{smiles}{SMILES of structure to add to plot}
 
 \item{kekulise}{Control aromaticity detection. Default \code{TRUE} is best with
-recent \code{\link{rcdk}} versions.}
+recent \code{rcdk} versions.}
 
 \item{coords}{The coordinates (xmin, ymin, xmax, ymax) for the structure.}
 }

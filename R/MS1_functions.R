@@ -69,7 +69,7 @@ IDfromFilePath <- function(file_path) {
 
 #' Select a Subset of Annotated Peaks for Plotting
 #'
-#' @description This uses the \code{\link{filterPeakSatellites}} of \code{\link{RMassBank}}
+#' @description This uses the \code{\link{filterPeakSatellites}} of \code{RMassBank}
 #' to select annotated peaks for plotting and thus prevent overlap.
 #'
 #' @usage trimAnnotation(annotated_dataframe,mzLimit=10,IntLimit=1,

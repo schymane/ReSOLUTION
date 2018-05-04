@@ -25,7 +25,7 @@ other settings are in use set this to \code{FALSE}. See Details.}
 Returns a "trimmed" annotated_dataframe
 }
 \description{
-This uses the \code{\link{filterPeakSatellites}} of \code{\link{RMassBank}}
+This uses the \code{\link{filterPeakSatellites}} of \code{RMassBank}
 to select annotated peaks for plotting and thus prevent overlap.
 }
 \details{

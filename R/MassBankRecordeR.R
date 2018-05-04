@@ -327,7 +327,7 @@ getMBRecordPeakAnnotations <- function(MBrecord) {
 #' \code{TRUE}, this is only performed after merging to ensure the merge works.
 #'
 #' @details NOTE: for this to work properly, the m/z column names must match exactly.
-#' This has only been verified so far on records generated with \code{\link{RMassBank}}.
+#' This has only been verified so far on records generated with \code{RMassBank}.
 #'
 #' @return Returns a data frame containing annotated peaks, or \code{NULL} if the retrieval failed.
 #'

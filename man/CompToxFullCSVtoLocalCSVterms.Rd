@@ -4,13 +4,16 @@
 \alias{CompToxFullCSVtoLocalCSVterms}
 \title{Prepare CompTox Dashboard Full CSV file for MetFragCL}
 \usage{
-CompToxFullCSVtoLocalCSVterms(csv_file, start_index=13)
+CompToxFullCSVtoLocalCSVterms(csv_file, start_index=13, TermsToRemove="default")
 }
 \arguments{
 \item{csv_file}{Full path and file name to the Dashboard CSV Download file to process}
 
 \item{start_index}{The column number where the metadata columns start (default \code{13} is appropriate
 for CompTox Dashboard Download file designed specifically for MetFrag)}
+
+\item{TermsToRemove}{Define column headers to remove from scoring terms. Select default values 
+using \code{"default"} (see details) or add a vector of strings. \code{c()}}
 }
 \value{
 Returns a list containing the CSV file name, a list of scoring terms to add to
@@ -19,6 +22,13 @@ the MetFrag config file and a corresponding score weights entry.
 \description{
 This function extracts metadata headers from the CompTox CSV download file
 for use in MetFragCL. It reads metadata field names for inclusion as scoring terms.
+}
+\details{
+The current default \code{TermsToRemove} are 
+\code{c("TOXCAST_NUMBER_OF_ASSAYS/TOTAL","TOXVAL_Link", "PPRTV_Link", "IRIS_Link")}.
+This option removes the terms from MetFrag scoring to avoid processing errors, 
+but these columns are retained in the results file, for downstream use if desired.
+If MetFrag exits with a status=5, check the log file for terms to add to this list.
 }
 \examples{
 # note this is an example off a limited file

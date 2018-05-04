@@ -6,7 +6,7 @@
 \usage{
 plotAdductEICs(mzML_filePath, smiles, adduct_list, rt=0, rt_in_sec=TRUE, plot_title=NULL,
 rt_window=NULL, mz_limit=0.001, isPos=TRUE, isLog=FALSE, isSwitching=FALSE, greyscale=FALSE,
-colours=NULL, cpdID=NULL, ymin_log=3, switchShift=0, kekulise=TRUE)
+colours=NULL, cpdID=NULL, ymin_log=3, switchShift=0, kekulise=TRUE,addMSMS=FALSE,newRMB=TRUE)
 }
 \arguments{
 \item{mzML_filePath}{Path to the mzML (or mzXML) file to extract the EICs.}
@@ -69,7 +69,7 @@ Returns a plot in the active device and a summary output.
 \description{
 This plots EICs of adducts in \code{adduct_list} from the mzML (or mzXML)
 and \code{smiles} given, with various options. Adduct masses are calculated from the
-\code{smiles} using \code{\link{getSuspectMasses}} via \code{\link{rcdk}}. Labelling
+\code{smiles} using \code{\link{getSuspectMasses}} via \code{rcdk}. Labelling
 will not be processed correctly. Adducts that cannot be calculated (especially in negative mode)
 are automatically skipped. Uses \code{\link{plotEICs}} behind the scenes.
 }

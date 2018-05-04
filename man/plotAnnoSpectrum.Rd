@@ -5,7 +5,7 @@
 \title{Plot Single Annotated MS/MS Spectrum}
 \usage{
 plotAnnoSpectrum(mz, int, main, smiles="", labels=NULL,mz_a=NA,int_a=NA, formatFormula=TRUE,
-absInt=FALSE,ylim_factor=2.5,max_xlim=0,kekulise=TRUE)
+absInt=FALSE,ylim_factor=2.5,max_xlim=0,kekulise=TRUE,legend=c("spec1","spec2"))
 }
 \arguments{
 \item{mz}{Vector containing mz values (x) to plot.}

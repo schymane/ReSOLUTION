@@ -4,7 +4,8 @@
 \alias{plotMS}
 \title{Plot MS1 Spectrum}
 \usage{
-plotMS(mz, int, main, labels=NULL, formatFormula=TRUE, absInt=FALSE,ylim_factor=2)
+plotMS(mz, int, main, labels=NULL, formatFormula=TRUE, absInt=FALSE,ylim_factor=2,
+smiles="")
 }
 \arguments{
 \item{mz}{Vector containing mz values (x) to plot.}
