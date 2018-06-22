@@ -6,7 +6,7 @@ PrecursorIonType,PrecursorIonMode,IsPositiveIonMode
 [M+D]+,2,TRUE
 [M+NH4]+,18,TRUE
 [M+Na]+,23,TRUE
-[M+K]+  ,39,TRUE
+[M+K]+,39,TRUE
 [M+CH3OH+H]+,33,TRUE
 [M+Cl]-,35,FALSE
 [M+HCOO]-,45,FALSE

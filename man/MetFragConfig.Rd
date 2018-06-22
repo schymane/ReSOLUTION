@@ -19,7 +19,7 @@ filter_by_InChIKey=TRUE)
 \code{adduct_type} to set whether this is monoisotopic mass or an adduct species.}
 
 \item{adduct_type}{The adduct species used to define mass (if \code{neutralPrecursorMass=FALSE}) and fragmentation settings
-in the config file, entered as either \code{PrecursorIonType} (text) or \code{PrecursorIonmode} (a number). The available
+in the config file, entered as either \code{PrecursorIonType} (text) or \code{PrecursorIonMode} (a number). The available
 options are given in the system file \code{MetFragAdductTypes.csv} in the \code{extdata} folder.
 Recommended default values (if ion state is unclear) are \code{[M+H]+} (1) for positive and \code{[M-H]-} (-1) for negative mode.}
 
