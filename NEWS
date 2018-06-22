@@ -1,3 +1,4 @@
+11.05.18 fixed one link in documentation, no version bump
 04.05.18 updated CompToxFullCSVtoLocalCSVterms; fixed links in documentation etc in #1, v0.1.6 
 26.04.18 added addMissingInChIKeys.CSV, adding to git, v0.1.5
 23.04.18 fixes to adduct settings in MetFragConfig and related functions, no version bump.
