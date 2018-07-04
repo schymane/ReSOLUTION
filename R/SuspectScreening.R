@@ -97,7 +97,8 @@ screenSuspects <- function(peaklist, suspects,ppmMax=5) {
 #' @param file_desc Description for the file (used in plot title and file names)
 #' @param series The series from \code{\link{build.homol}} to screen
 #' @param series_name The name of the series (used in legend)
-#' @param adduct The adduct species of the homologue to screen.
+#' @param adduct The adduct species of the homologue to screen. NOTE: the adduct must be exactly as written 
+#' in the adducts table in the enviPat package.
 #' @param rt_window The retention time window (in seconds) for EIC extraction. This is added
 #' to \code{rt} to form the extraction window. Should not be zero! If \code{NULL},
 #' the whole EIC is extracted.
@@ -145,6 +146,9 @@ screen.homol <- function(file, file_desc, series, series_name, adduct, rt_window
   data(isotopes, package="enviPat")
   data(adducts, package="enviPat")
   adduct_index <- which(as.character(adducts$Name)==adduct)
+  if (length(adduct_index)<1) {
+    stop("Incorrect adduct specification, adduct must match entry in enviPat")
+  }
   adduct_name <- sub("+","p",adduct,fixed=TRUE)
   adduct_name <- sub("-","m",adduct_name,fixed=TRUE)
   #rt_window <- rt_window
@@ -176,7 +180,7 @@ screen.homol <- function(file, file_desc, series, series_name, adduct, rt_window
   }
 
   if (writeCSV) {
-    write.csv(screen_summary, file=csv_name)
+    write.csv(screen_summary, file=csv_name,row.names=FALSE)
   }
   #
 
