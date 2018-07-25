@@ -17,7 +17,8 @@ isPos=TRUE, kekulise=TRUE, writePDF=FALSE, writeCSV=FALSE)
 
 \item{series_name}{The name of the series (used in legend)}
 
-\item{adduct}{The adduct species of the homologue to screen.}
+\item{adduct}{The adduct species of the homologue to screen. NOTE: the adduct must be exactly as written 
+in the adducts table in the enviPat package.}
 
 \item{rt_window}{The retention time window (in seconds) for EIC extraction. This is added
 to \code{rt} to form the extraction window. Should not be zero! If \code{NULL},

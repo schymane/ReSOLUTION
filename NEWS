@@ -1,3 +1,4 @@
+25.07.18 fixed adduct check in MetFragConfig, added RMB_EIC_prescreen, v0.1.7
 11.05.18 fixed one link in documentation, no version bump
 04.05.18 updated CompToxFullCSVtoLocalCSVterms; fixed links in documentation etc in #1, v0.1.6 
 26.04.18 added addMissingInChIKeys.CSV, adding to git, v0.1.5

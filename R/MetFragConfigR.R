@@ -31,7 +31,8 @@
 #' \code{adduct_type} to set whether this is monoisotopic mass or an adduct species.
 #' @param adduct_type The adduct species used to define mass (if \code{neutralPrecursorMass=FALSE}) and fragmentation settings
 #' in the config file, entered as either \code{PrecursorIonType} (text) or \code{PrecursorIonmode} (a number). The available
-#' options are given in the system file \code{MetFragAdductTypes.csv} in the \code{extdata} folder.
+#' options are given in the system file \code{MetFragAdductTypes.csv} in the \code{extdata} folder. If 
+#' \code{neutralPrecursorMass=FALSE}, set \code{adduct_type=0}.
 #' Recommended default values (if ion state is unclear) are \code{[M+H]+} (1) for positive and \code{[M-H]-} (-1) for negative mode.
 #' @param results_filename Enter a base filename for naming the results files - do not include file endings
 #' @param peaklist_path Enter the full path and file name to the peak list for this config file
@@ -226,7 +227,12 @@ MetFragConfig <- function(mass, adduct_type, results_filename, peaklist_path, ba
   } else if (adduct_type_num) {
     # retrieve adduct mode to test
     adduct_mode <- isPosIonMode_list[match(adduct_type,adduct_num_list)]
-    if (adduct_mode == IsPosMode) {
+    if (adduct_type %in%  MetFragAdductTypes$PrecursorIonMode[1]) {
+      # if adduct type is zero, don't check, only write out if not neutralPrecursorMass
+      if (!neutralPrecursorMass) {
+        writeLines(paste("PrecursorIonMode = ",as.character(adduct_type),sep=""),con=file.conn)
+      }
+    } else if (adduct_mode == IsPosMode) {
       # if we have a number match and the modes match, print PrecursorIonMode, else stop
       writeLines(paste("PrecursorIonMode = ",as.character(adduct_type),sep=""),con=file.conn)
     } else {
