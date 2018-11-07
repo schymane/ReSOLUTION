@@ -29,7 +29,7 @@
 #' 
 RMB_EIC_prescreen <- function(archive_name, RMB_mode, FileList, cmpd_list, 
                               ppm_limit_fine=10, EIC_limit=0.001) {
-  pdf_title <- paste(archive_name, "_trim_EICscan.pdf",sep="")
+  pdf_title <- paste(archive_name, "_EICscan.pdf",sep="")
   pdf(pdf_title)
   n_spec <- 0
   cmpd_RT_maxI <- ""
@@ -48,7 +48,11 @@ RMB_EIC_prescreen <- function(archive_name, RMB_mode, FileList, cmpd_list,
     n_spec <- n_spec+1
     smiles <- findSmiles(cpdID)
     #mz <- cmpd_info$mz[i] 
-    mz <- as.numeric(findMz(cpdID, RMB_mode)[3])
+    if (!is.na(smiles)) {
+      mz <- as.numeric(findMz(cpdID, RMB_mode)[3])
+    } else {
+      mz <- as.numeric(findMz(cpdID, RMB_mode,retrieval="unknown")[3])
+    }
     #eic <- findEIC(f,mz$mzCenter, limit=0.001)
     eic <- findEIC(f,mz, limit=EIC_limit)
     msms_found[n_spec] <- FALSE # set to false and set to TRUE if found
@@ -83,6 +87,6 @@ RMB_EIC_prescreen <- function(archive_name, RMB_mode, FileList, cmpd_list,
   
   #summary <- cbind(cmpd_ids,cmpd_info$mz,cmpd_RT_maxI,cmpd_RT_maxI_min,max_I_prec)
   write.csv(cbind(file_list$ID,cmpd_info$mz,cmpd_info$Name, cmpd_RT_maxI,cmpd_RT_maxI_min,max_I_prec,msms_found),
-            file=paste(archive_name, "_RTs_trim.csv",sep=""),row.names=F)
+            file=paste(archive_name, "_RTs_wI.csv",sep=""),row.names=F)
   #file=paste(basename(mzML_file), "_RTs_wI.csv",sep=""),row.names=F)
 }
