@@ -27,8 +27,9 @@
 #' @param colNames A vector containing column names to match \code{field_codes}. These must be
 #' in the same order. If \code{"default"}, trimmed versions of the default \code{field_codes}
 #' are used. If \code{"field_codes"}, then the entries in \code{field_codes} are used.
-#' @param trimEntry If \code{TRUE}, the \code{field_code} is removed, if \code{FALSE},
-#' the full line is returned.
+#' @param recursive If \code{TRUE}, subdirectories are included, if \code{FALSE},
+#' only given directory is included.
+#' @param pattern The pattern to search for file names. Typically \code{*.txt} but can be adjusted. 
 #'
 #' @details Use \code{\link{getMBRecordPeaks}}, \code{\link{getMBRecordPeakAnnotations}}
 #' and/or \code{\link{getMBPeaksAnnos}} to retrieve peaks and peak annotations. This function
@@ -63,7 +64,7 @@
 #' getMBRecordInfo(directory, csv_name, field_codes="default", colNames="default",recursive=TRUE)
 #'
 getMBRecordInfo <- function(directory, csv_name, field_codes="default", colNames="default",
-                            recursive=TRUE) {
+                            recursive=TRUE, pattern="*.txt") {
   # set up the default values
   if (field_codes == "default") {
     field_codes <- c("ACCESSION", "CH$NAME", "CH$SMILES", "CH$EXACT_MASS", "CH$FORMULA", "CH$IUPAC",
@@ -89,7 +90,7 @@ getMBRecordInfo <- function(directory, csv_name, field_codes="default", colNames
   }
   n_cols <- length(colNames)
   # then extract the info
-  files <- list.files(directory, pattern="*.txt", full.names=TRUE, recursive=recursive)
+  files <- list.files(directory, pattern=pattern, full.names=TRUE, recursive=recursive)
   # set up the empty matrix
   wantedmat <- matrix(0,length(files),(n_cols))
   colnames(wantedmat) <- colNames
