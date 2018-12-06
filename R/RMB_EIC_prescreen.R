@@ -46,7 +46,9 @@ RMB_EIC_prescreen <- function(archive_name, RMB_mode, FileList, cmpd_list,
     #f <- openMSfile(file_list[i,1])
     cpdID <- file_list$ID[i]
     n_spec <- n_spec+1
-    smiles <- findSmiles(cpdID)
+    smiles <- tryCatch(findSmiles(cpdID),
+                       error = function(e) NA)
+    #smiles <- findSmiles(cpdID)
     #mz <- cmpd_info$mz[i] 
     if (!is.na(smiles)) {
       mz <- as.numeric(findMz(cpdID, RMB_mode)[3])

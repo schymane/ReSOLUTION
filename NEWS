@@ -1,3 +1,4 @@
+06.12.18 added tryCatch to RMB_EIC_prescreen, v0.1.8
 13.11.18 added pattern to getMBRecordInfo, updated docs, no version bump. 
 07.11.18 fixed findMz and hardcoded names in RMB_EIC_prescreen, no version bump.
 25.07.18 fixed adduct check in MetFragConfig, added RMB_EIC_prescreen, v0.1.7
