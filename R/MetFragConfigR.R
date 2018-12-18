@@ -32,7 +32,7 @@
 #' @param adduct_type The adduct species used to define mass (if \code{neutralPrecursorMass=FALSE}) and fragmentation settings
 #' in the config file, entered as either \code{PrecursorIonType} (text) or \code{PrecursorIonmode} (a number). The available
 #' options are given in the system file \code{MetFragAdductTypes.csv} in the \code{extdata} folder. If 
-#' \code{neutralPrecursorMass=FALSE}, set \code{adduct_type=0}.
+#' \code{neutralPrecursorMass=TRUE}, set \code{adduct_type=0}.
 #' Recommended default values (if ion state is unclear) are \code{[M+H]+} (1) for positive and \code{[M-H]-} (-1) for negative mode.
 #' @param results_filename Enter a base filename for naming the results files - do not include file endings
 #' @param peaklist_path Enter the full path and file name to the peak list for this config file
