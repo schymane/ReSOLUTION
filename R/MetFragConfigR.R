@@ -453,7 +453,8 @@ MetFragConfig <- function(mass, adduct_type, results_filename, peaklist_path, ba
   #
   #user defined scores ...
   #UDS_Category <- ""
-  if ((nchar(UDS_Category)>1)&&(grepl("Local",DB))) {
+  if ((nchar(UDS_Category)>1)) {
+#    if ((nchar(UDS_Category)>1)&&(grepl("Local",DB))) {
     MetFragScoreTypes <- paste(MetFragScoreTypes,UDS_Category,sep=",")
     MetFragScoreWeights <- paste(MetFragScoreWeights,UDS_Weights,sep="")
   } #don't need to write anything extra to file as this must be in the localDB
