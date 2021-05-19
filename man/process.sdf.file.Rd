@@ -21,10 +21,9 @@ CompToxSDF <- system.file("extdata","CompToxBatchSearch_MetFrag_MSready_C10H14N2
 process.sdf.file(CompToxSDF)
 
 }
-\author{
-Christoph Ruttkies, Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{CompToxSDFtoLocalSDFterms}}
 }
-
+\author{
+Christoph Ruttkies, Emma Schymanski <emma.schymanski@uni.lu>
+}

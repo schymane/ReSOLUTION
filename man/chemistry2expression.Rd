@@ -20,10 +20,9 @@ labels_1 <- c("C2H4NO", "C6H7O2", "C8H10NO3", "C11H16NO3")
 chemistry2expression(labels_1)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu> and Steffen Neumann <sneumann@ipb-halle.de>
-}
 \seealso{
 \code{\link{plotSpectra}}, \code{\link{trimAnnotation}}, \code{\link{text}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu> and Steffen Neumann <sneumann@ipb-halle.de>
+}

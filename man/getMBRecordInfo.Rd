@@ -19,8 +19,10 @@ getMBRecordInfo(directory, csv_name, field_codes="default", colNames="default",r
 in the same order. If \code{"default"}, trimmed versions of the default \code{field_codes}
 are used. If \code{"field_codes"}, then the entries in \code{field_codes} are used.}
 
-\item{trimEntry}{If \code{TRUE}, the \code{field_code} is removed, if \code{FALSE},
-the full line is returned.}
+\item{recursive}{If \code{TRUE}, subdirectories are included, if \code{FALSE},
+only given directory is included.}
+
+\item{pattern}{The pattern to search for file names. Typically \code{*.txt} but can be adjusted.}
 }
 \value{
 Saves the results in \code{csvfile}, or \code{error}.
@@ -55,11 +57,10 @@ csv_name <- paste0(getwd(),"/test.csv")
 getMBRecordInfo(directory, csv_name, field_codes="default", colNames="default",recursive=TRUE)
 
 }
+\seealso{
+\code{\link{MBFileToVector}}, \code{\link{getMBRecordEntry}}, \code{\link{getMBPeaksAnnos}}.
+}
 \author{
 Emma Schymanski <emma.schymanski@uni.lu>, rewritten from getInfo
 script from Erik Mueller.
 }
-\seealso{
-\code{\link{MBFileToVector}}, \code{\link{getMBRecordEntry}}, \code{\link{getMBPeaksAnnos}}.
-}
-

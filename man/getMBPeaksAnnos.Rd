@@ -32,11 +32,10 @@ getMBPeaksAnnos(MBrecord)
 getMBPeaksAnnos(MBrecord, fixColNames=TRUE)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{getMBRecordPeakAnnotations}}, \code{\link{getMBRecordPeaks}},
 \code{\link{fixMzIntColNames}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

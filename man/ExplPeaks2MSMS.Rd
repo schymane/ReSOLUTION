@@ -20,10 +20,9 @@ ExplPeaks <- "63.9622_516.7;77.9655_999.0;82.0298_373.2"
 ExplPeakList <- ExplPeaks2MSMS(ExplPeaks)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

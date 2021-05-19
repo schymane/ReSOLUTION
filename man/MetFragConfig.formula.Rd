@@ -55,11 +55,10 @@ runMetFrag(config_file2, metfrag_dir, MetFragCL_name)
 runMetFrag(config_file3, metfrag_dir, MetFragCL_name)
 
 }
+\seealso{
+\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}, \code{\link{getAdductMassesFromFormula}}
+}
 \author{
 Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL),
 Antony J. Williams and team (CompTox Dashboard)
 }
-\seealso{
-\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}, \code{\link{getAdductMassesFromFormula}}
-}
-

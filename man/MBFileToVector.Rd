@@ -25,4 +25,3 @@ MBFileToVector(MBrecord)
 \author{
 Emma Schymanski <emma.schymanski@uni.lu>, based on code from Erik Mueller.
 }
-

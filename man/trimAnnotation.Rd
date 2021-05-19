@@ -48,10 +48,9 @@ trimAnnotation(anno_peaks, mzLimit=10, IntLimit=1, column_names=anno_cols)
 
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{extractMS1.RMBarchive}}
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

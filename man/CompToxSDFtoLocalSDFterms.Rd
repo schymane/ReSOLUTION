@@ -23,11 +23,10 @@ LocalSDFterms <- CompToxSDFtoLocalSDFterms(CompToxSDF)
 
 
 }
+\seealso{
+\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}, \code{\link{process.sdf.file}}
+}
 \author{
 Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL),
 Antony J. Williams and team (CompTox Dashboard)
 }
-\seealso{
-\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}, \code{\link{process.sdf.file}}
-}
-

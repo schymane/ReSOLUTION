@@ -33,10 +33,9 @@ babel_dir <- "C:/Program Files (x86)/OpenBabel-2.3.2"
 InChIKeys <- addMissingInChIKeys.CSV(testCSV,13,5,babel_dir,write=FALSE)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{getInChIKey.obabel}}, \code{\link{getCactus}}, \code{\link{InChIKey_test}}
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

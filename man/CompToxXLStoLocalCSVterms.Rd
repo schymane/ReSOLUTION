@@ -29,11 +29,10 @@ CompToxXLS <- system.file("extdata","CompToxBatchSearch_MetFrag_MSready_C10H14N2
 LocalCSVterms <- CompToxXLStoLocalCSVterms(CompToxXLS)
 
 }
+\seealso{
+\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}
+}
 \author{
 Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL),
 Antony J. Williams and team (CompTox Dashboard)
 }
-\seealso{
-\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}
-}
-

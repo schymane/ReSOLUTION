@@ -21,7 +21,7 @@ filter_by_InChIKey=TRUE)
 \item{adduct_type}{The adduct species used to define mass (if \code{neutralPrecursorMass=FALSE}) and fragmentation settings
 in the config file, entered as either \code{PrecursorIonType} (text) or \code{PrecursorIonmode} (a number). The available
 options are given in the system file \code{MetFragAdductTypes.csv} in the \code{extdata} folder. If 
-\code{neutralPrecursorMass=FALSE}, set \code{adduct_type=0}.
+\code{neutralPrecursorMass=TRUE}, set \code{adduct_type=0}.
 Recommended default values (if ion state is unclear) are \code{[M+H]+} (1) for positive and \code{[M-H]-} (-1) for negative mode.}
 
 \item{results_filename}{Enter a base filename for naming the results files - do not include file endings}
@@ -166,10 +166,9 @@ runMetFrag(config_file, metfrag_dir, MetFragCL_name)
 runMetFrag(config_file2, metfrag_dir, MetFragCL_name)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL author).
-}
 \seealso{
 \code{\link{runMetFrag}} to run the config files.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL author).
+}

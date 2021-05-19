@@ -4,8 +4,14 @@
 \alias{RMB_EIC_prescreen}
 \title{EIC Prescreening function for RMassBank}
 \usage{
-RMB_EIC_prescreen(archive_name, RMB_mode, FileList, cmpd_list,
-  ppm_limit_fine = 10, EIC_limit = 0.001)
+RMB_EIC_prescreen(
+  archive_name,
+  RMB_mode,
+  FileList,
+  cmpd_list,
+  ppm_limit_fine = 10,
+  EIC_limit = 0.001
+)
 }
 \arguments{
 \item{archive_name}{Name of the archive (compatible with RMassBank naming)}
@@ -41,4 +47,3 @@ Currently no examples implemented.
 \author{
 Emma Schymanski <emma.schymanski@uni.lu>
 }
-

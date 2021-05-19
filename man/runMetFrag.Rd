@@ -42,10 +42,9 @@ runMetFrag(config_file, metfrag_dir, MetFragCL_name)
 runMetFrag(config_file2, metfrag_dir, MetFragCL_name)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL author).
-}
 \seealso{
 \code{\link{MetFragConfig}}
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL author).
+}

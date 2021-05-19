@@ -28,10 +28,9 @@ getMBRecordPeaks(MBrecord, fixColNames = FALSE)
 getMBRecordPeaks(MBrecord, fixColNames = TRUE)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>, based on code from Erik Mueller.
-}
 \seealso{
 \code{\link{getMBPeaksAnnos}}, \code{\link{fixMzIntColNames}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>, based on code from Erik Mueller.
+}

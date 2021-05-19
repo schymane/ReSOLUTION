@@ -23,10 +23,9 @@ MBrecord <- system.file("extdata","EA020161_Diclofenac.txt",package="ReSOLUTION"
 getMBRecordPeakAnnotations(MBrecord)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>, based on code from Erik Mueller.
-}
 \seealso{
 \code{\link{getMBPeaksAnnos}}, \code{\link{getMBRecordPeaks}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>, based on code from Erik Mueller.
+}

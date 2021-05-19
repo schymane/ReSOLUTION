@@ -26,10 +26,9 @@ to \code{\link{extractMS1.RMBarchive}}, this only saves data where MS2 were foun
 Note that this function could be extended to improve the MS2 export.
 The current state is very basic.
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{msmsWorkflow}}, \code{\link{extractMS1.RMBarchive}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

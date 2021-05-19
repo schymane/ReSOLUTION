@@ -44,11 +44,10 @@ gc() #clear memory after.
 
 
 }
+\seealso{
+\code{\link{nontarget}}.
+}
 \author{
 Emma Schymanski (<emma.schymanski@uni.lu>, wrapper), Martin Loos
 (\code{\link{nontarget}}).
 }
-\seealso{
-\code{\link{nontarget}}.
-}
-

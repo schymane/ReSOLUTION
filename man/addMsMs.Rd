@@ -45,10 +45,9 @@ plotEICs(mzML_file, mz, rt, rt_in_sec=FALSE, smiles = smiles)
 plotEICs(mzML_file, mz, rt, rt_in_sec=FALSE, smiles = smiles, addMSMS=TRUE)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>, Michael Stravs <michael.stravs@eawag.ch>
-}
 \seealso{
 \code{\link{findMsMsHR.mass}}, \code{\link{plotEICs}}, \code{\link{addMsMs.oldRMB}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>, Michael Stravs <michael.stravs@eawag.ch>
+}

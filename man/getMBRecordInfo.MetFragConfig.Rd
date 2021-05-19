@@ -31,10 +31,9 @@ MBinfo <- getMBRecordInfo.MetFragConfig(MBrecord,peaklist, writePeaklist=FALSE)
 # use writePeaklist=TRUE to create a peaklist from the MassBank record
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{getMBRecordPeaks}}, \code{\link{getMBRecordEntry}}, \code{\link{MetFragConfig}}
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

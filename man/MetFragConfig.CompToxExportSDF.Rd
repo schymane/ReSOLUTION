@@ -47,11 +47,10 @@ MetFragCL_name <- "MetFrag2.4.4-msready-CL.jar"
 runMetFrag(config_file, metfrag_dir, MetFragCL_name)
 
 }
+\seealso{
+\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}, \code{\link{CompToxSDFtoLocalSDFterms}}
+}
 \author{
 Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL),
 Antony J. Williams and team (CompTox Dashboard)
 }
-\seealso{
-\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}, \code{\link{CompToxSDFtoLocalSDFterms}}
-}
-

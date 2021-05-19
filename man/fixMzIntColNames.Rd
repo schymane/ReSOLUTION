@@ -26,10 +26,9 @@ MBcolNames <- colnames(getMBRecordPeaks(MBrecord))
 fixMzIntColNames(MBcolNames)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{getMBPeaksAnnos}}, \code{\link{getMBRecordPeaks}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

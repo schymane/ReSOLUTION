@@ -86,12 +86,11 @@ MetFragCL_name <- "MetFrag2.4.4-msready-CL.jar"
 runMetFrag(config_file, metfrag_dir, MetFragCL_name)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL),
-Antony J. Williams and team (CompTox Dashboard)
-}
 \seealso{
 \code{\link{MetFragConfig}}, \code{\link{runMetFrag}}, \code{\link{CompToxXLStoLocalCSVterms}},
 \code{\link{CompToxCSVtoLocalCSVterms}}, \code{\link{CompToxFullCSVtoLocalCSVterms}}
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL),
+Antony J. Williams and team (CompTox Dashboard)
+}

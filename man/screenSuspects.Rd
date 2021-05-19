@@ -25,4 +25,3 @@ This screens a peak list for given suspects by exact mass
 \author{
 Jennifer Schollee, Michael Stravs, Emma Schymanski <emma.schymanski@uni.lu>
 }
-

@@ -55,11 +55,10 @@ smiles_1 <- "O=C(Oc1ccccc1OC(C)C)NC"
 plotSpectrum(mz_1, int_1, main="test spec",labels=labels_1, smiles=smiles_1)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{plotSpectra}}, \code{\link{renderSMILES.rcdk}}, \code{\link{chemistry2expression}},
 \code{\link{trimAnnotation}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

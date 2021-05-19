@@ -18,10 +18,9 @@ Returns nothing; files are saved externally.
 This extracts the "raw" MS1 data from a \code{RMassBank} archive file
 and saves the corresponding MS1 files in the given directory.
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{msmsWorkflow}}
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

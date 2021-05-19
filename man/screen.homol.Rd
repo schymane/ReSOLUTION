@@ -69,10 +69,9 @@ screen.homol(mzML_file, "test_file", pegs, "PEGS_MpNH4", "M+NH4")
 
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{plotEICs}}, \code{\link{build.homol}}
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

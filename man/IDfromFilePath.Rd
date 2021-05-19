@@ -21,10 +21,9 @@ file name, given the full path.
 IDfromFilePath("C:/MY_DATA/MS1/3529_Indoxacarb_MS1raw.txt")
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{extractMS1.RMBarchive}}
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

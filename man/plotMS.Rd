@@ -46,11 +46,10 @@ plotMS(ms1_mz, ms1_int, main="test MS1 spec",labels=ms1_labels, formatFormula=FA
 absInt=FALSE, smiles=smiles_1)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{plotSpectra}}, \code{\link{renderSMILES.rcdk}}, \code{\link{chemistry2expression}},
 \code{\link{trimAnnotation}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

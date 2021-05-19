@@ -101,11 +101,10 @@ plotSpectra(mz_1, int_1, main="test spec",labels=labels_1, labelSpec=1, smiles=s
 chem2express=TRUE, mz_a=mz_1, int_a = int_1, legend=c("spec1","spec1 again"))
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{plot}}, \code{\link{renderSMILES.rcdk}}, \code{\link{chemistry2expression}},
 \code{\link{text}}, \code{\link{trimAnnotation}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

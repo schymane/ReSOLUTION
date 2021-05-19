@@ -31,10 +31,9 @@ addStructToPlot("O=C(Oc1ccccc1OC(C)C)NC", kekulise=TRUE, coords=c(205,1000,209,2
 addStructToPlot("O=C(Oc1ccccc1OC(C)C)NC", kekulise=FALSE, coords=c(205,1000,209,2000))
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 \code{\link{renderSMILES.rcdk}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}

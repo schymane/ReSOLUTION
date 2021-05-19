@@ -38,10 +38,9 @@ field_code <- "CH$LINK: PUBCHEM CID"
 getMBRecordEntry(field_code, record)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>.
-}
 \seealso{
 \code{\link{MBFileToVector}}, \code{\link{getMBRecordInfo}}.
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>.
+}

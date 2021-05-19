@@ -36,11 +36,10 @@ CompToxFullCSVFile <- system.file("extdata","dsstox_MS_Ready_MetFragTestCSV5.csv
 LocalCSVterms <- CompToxCSVtoLocalCSVterms(CompToxFullCSVFile)
 
 }
+\seealso{
+\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}
+}
 \author{
 Emma Schymanski <emma.schymanski@uni.lu> in partnership with Christoph Ruttkies (MetFragCL),
 Antony J. Williams and team (CompTox Dashboard)
 }
-\seealso{
-\code{\link{MetFragConfig}}, \code{\link{runMetFrag}}
-}
-

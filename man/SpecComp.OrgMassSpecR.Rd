@@ -35,11 +35,10 @@ sim <- SpecComp.OrgMassSpecR(spec1,spec2, header=F)
 sim
 
 }
+\seealso{
+\code{\link{SpectrumSimilarity}}.
+}
 \author{
 Emma Schymanski <emma.schymanski@uni.lu>,
 Nathan Dodder (\code{\link{SpectrumSimilarity}} function).
 }
-\seealso{
-\code{\link{SpectrumSimilarity}}.
-}
-

@@ -20,10 +20,9 @@ FormulasOfExplPeaks <- "62.9638:[HO2P]-H-;78.959:[HO3P]-H-;153.0325:[C4H10O4P]-"
 ExplFormulas2AnnoMZ(FormulasOfExplPeaks)
 
 }
-\author{
-Emma Schymanski <emma.schymanski@uni.lu>
-}
 \seealso{
 
 }
-
+\author{
+Emma Schymanski <emma.schymanski@uni.lu>
+}
