@@ -1,3 +1,4 @@
+19.05.21 fixed double slash error in getMBRecordPeaks, v0.1.10
 22.01.20 fixed minor bug in UDS in MetFragConfig, v0.1.9
 18.12.18 fixed minor typo in MetFragConfig documentation, no version bump
 06.12.18 added tryCatch to RMB_EIC_prescreen, v0.1.8

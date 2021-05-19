@@ -1,8 +1,8 @@
 Package: ReSOLUTION
 Type: Package
 Title: SOLUTIONS for High ReSOLUTION Mass Spectrometry
-Version: 0.1.9
-Date: 2020-01-22
+Version: 0.1.10
+Date: 2021-05-19
 Authors@R: c(
 	person(given="Emma L.", family="Schymanski", email="emma.schymanski@uni.lu", role=c("aut","cre")),
 	person(given="Michael A.", family="Stravs", email="michael.stravs@eawag.ch",role=c("ctb")),
@@ -45,4 +45,4 @@ Collate:
 	'MetFragConfigR.R'
 	'processSDF.R'
 	'RMB_EIC_prescreen.R'
-RoxygenNote: 5.0.1
+RoxygenNote: 7.0.0

@@ -231,6 +231,9 @@ getMBRecordPeaks <- function(MBrecord, fixColNames = FALSE) {
   # get the indexes we need
   PKStart <- grep("PK$PEAK:", record, fixed = TRUE) + 1
   endslash <- grep("//", record, fixed = TRUE)
+  # if other parts of the record have //, this will cause errors
+  # so, take the last entry
+  endslash <- endslash[length(endslash)]
   n_peaks <- endslash-PKStart
   peak_colnames <- strsplit(grep('PK$PEAK:',record, value = TRUE, fixed = TRUE),split=" ")[[1]]
   # remove first entry as it's just PK:PEAK
