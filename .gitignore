@@ -1,4 +1,3 @@
-
 .Rbuildignore
 .Rhistory
 .Rproj.user/63653538/build_options
@@ -34,3 +33,4 @@
 .Rproj.user/63653538/session-persistent-state
 .Rproj.user/shared/notebooks/paths
 .Rproj.user
+.RData

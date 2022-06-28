@@ -66,7 +66,7 @@
 getMBRecordInfo <- function(directory, csv_name, field_codes="default", colNames="default",
                             recursive=TRUE, pattern="*.txt") {
   # set up the default values
-  if (field_codes == "default") {
+  if (length(field_codes) == 1 && field_codes == "default") {
     field_codes <- c("ACCESSION", "CH$NAME", "CH$SMILES", "CH$EXACT_MASS", "CH$FORMULA", "CH$IUPAC",
                      "CH$LINK: CAS", "CH$LINK: PUBCHEM CID", "CH$LINK: INCHIKEY", "CH$LINK: CHEMSPIDER",
                      "AC$MASS_SPECTROMETRY: COLLISION_ENERGY", "AC$MASS_SPECTROMETRY: FRAGMENTATION_MODE",
@@ -74,9 +74,10 @@ getMBRecordInfo <- function(directory, csv_name, field_codes="default", colNames
                      "MS$FOCUSED_ION: PRECURSOR_M/Z", "MS$FOCUSED_ION: PRECURSOR_TYPE")
   }
   # if colNames = "field_codes", then set it to be the field_codes
-  if (colNames == "field_codes") {
+  
+    if (length(colNames) == 1 && colNames == "field_codes") {
     colNames <- field_codes
-  } else if (colNames == "default") {
+  } else if (length(colNames) == 1 && colNames == "default") {
     colNames <- c("ACCESSION", "NAME", "SMILES", "NEUTRAL_EXACT_MASS", "FORMULA", "StdInChI",
                   "CAS_RN", "PUBCHEM_CID", "InChIKey", "CHEMSPIDER_ID",
                   "COLLISION_ENERGY", "FRAGMENTATION_MODE",
